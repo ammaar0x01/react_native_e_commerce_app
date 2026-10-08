@@ -1,3 +1,10 @@
+## Pawn Shop
+- Started: 2026-10-02
+- Updated: 2026-10-08
+- Version: 0.1
+- Status: work-in-progress
+---
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
