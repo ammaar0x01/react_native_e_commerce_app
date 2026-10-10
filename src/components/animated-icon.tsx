@@ -111,6 +111,7 @@ export function AnimatedIcon() {
 }
 
 const styles = StyleSheet.create({
+ 
   imageContainer: {
     justifyContent: 'center',
     alignItems: 'center',
