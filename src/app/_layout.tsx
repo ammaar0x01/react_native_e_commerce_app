@@ -587,6 +587,9 @@ import {
 
 import { AnimatedSplashOverlay } from '@/components/animated-icon';
 
+import "../global.css"
+
+
 SplashScreen.preventAutoHideAsync();
 
 interface NavItemProps {
@@ -657,6 +660,11 @@ export default function TabLayout() {
   const { width } = useWindowDimensions();
   const router = useRouter();
   const pathname = usePathname();
+
+  const isAboutPage = pathname === '/about';
+  const isLoginScreen = pathname === '/login';
+  const isLoginScreen1 = pathname === '/login1';
+  const isSignUpScreen = pathname === '/signup';
 
   const isWeb = Platform.OS === 'web';
   const isDesktop = isWeb && width >= 768;
@@ -736,7 +744,7 @@ export default function TabLayout() {
         )}
 
         {/* Web Mobile Top Bar */}
-        {isWebMobile && (
+        {isWebMobile && !isAboutPage && !isLoginScreen && !isLoginScreen1 && !isSignUpScreen && (
           <View style={{ backgroundColor: '#000000', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 20, paddingVertical: 14, zIndex: 50 }}>
             <Text style={{ color: '#FFFFFF', fontWeight: '700', fontSize: 18 }}>The PawnShop</Text>
             <TouchableOpacity onPress={() => setMobileMenuOpen(!mobileMenuOpen)} style={{ padding: 4 }}>
@@ -763,7 +771,17 @@ export default function TabLayout() {
 
         <View style={{ flex: 1, flexDirection: 'row', width: '100%', height: '100%', backgroundColor: '#E59400' }}>
           {/* Desktop Web Sidebar */}
-          {isDesktop && (
+
+{/* Update Desktop Web Sidebar condition */}
+{/* {isDesktop && !isAboutPage && (
+  <View style={{ width: 76, backgroundColor: '#000000', ... }}>
+    <TouchableOpacity onPress={() => router.push('/about' as any)} style={{ padding: 10, borderRadius: 12 }}>
+      <Octicons name="arrow-left" size={22} color="white" />
+    </TouchableOpacity>
+  </View>
+)} */}
+
+          {isDesktop && !isAboutPage && !isLoginScreen && !isLoginScreen1 && !isSignUpScreen && (
             <View
               style={{
                 width: 76,
@@ -790,9 +808,17 @@ export default function TabLayout() {
                 ))}
               </View>
 
-              <TouchableOpacity onPress={() => router.back()} style={{ padding: 10, borderRadius: 12 }}>
+              <TouchableOpacity 
+                // onPress={() => router.back()} 
+                onPress={() => router.push('/about' as any)}
+                style={{ padding: 10, borderRadius: 12 }}
+                >
                 <Octicons name="arrow-left" size={22} color="white" />
               </TouchableOpacity>
+
+                {/* <TouchableOpacity onPress={() => router.push('/about' as any)} style={{ padding: 10, borderRadius: 12 }}>
+      <Octicons name="arrow-left" size={22} color="white" />
+    </TouchableOpacity> */}
             </View>
           )}
 
@@ -867,6 +893,8 @@ export default function TabLayout() {
               <Tabs.Screen name="cart" options={{ href: null }} />
               <Tabs.Screen name="search" options={{ href: null }} />
               <Tabs.Screen name="p" options={{ href: null }} />
+              <Tabs.Screen name="home" options={{ href: null }} />
+              <Tabs.Screen name="about" options={{ href: null }} />
 
               <Tabs.Screen name="product/products" options={{ href: null }} />
               <Tabs.Screen name="product/details" options={{ href: null }} />
@@ -898,6 +926,10 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 4,
+
+    // ✅ Modern cross-platform boxShadow property
+// boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+// elevation: 5, // Keep elevation for native Android if desired
   },
   topBarDefaultContainer: {
     flexDirection: 'row',

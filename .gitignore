@@ -45,6 +45,8 @@ example
 
 # --- # 
 _trash 
+.claude 
+.vscode
 
 _notes.txt
 # --- # 

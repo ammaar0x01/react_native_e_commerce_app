@@ -249,22 +249,32 @@ export default function storesView() {
 const styles = StyleSheet.create({
   outerContainer: {
     flex: 1,
-    backgroundColor: '#FFE8B6', // Warm cream background matching image
-    padding: 16,
+    // backgroundColor: '#FFE8B6', // Warm cream background matching image
+    backgroundColor: '#ffffff', 
+
+    padding: 40,
   },
   scrollContent: {
-    paddingBottom: 60,
+    paddingBottom: 40,
   },
   contentWrapper: {
     width: '100%',
-    maxWidth: 900,
+    // maxWidth: 900,
+    // maxWidth: 1300,
+    // maxWidth: '90%',
+
+
     alignSelf: 'center',
   },
   pageTitle: {
-    fontSize: 32,
+    // fontSize: 32,
+    fontSize: 40,
+
     fontWeight: '800',
     color: '#111827',
     marginBottom: 20,
+
+    fontFamily: 'serif', 
   },
   searchBarContainer: {
     flexDirection: 'row',
@@ -290,17 +300,21 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: '#111827',
   },
+
   nearMeButton: {
     backgroundColor: '#E59400',
     borderRadius: 20,
     paddingVertical: 14,
     alignItems: 'center',
     marginBottom: 24,
+
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 3,
+  
+    width: 200, 
   },
   nearMeButtonText: {
     color: '#FFFFFF',
@@ -309,10 +323,18 @@ const styles = StyleSheet.create({
   },
   resultsCountText: {
     fontSize: 16,
-    fontWeight: '700',
-    color: '#111827',
+
+    // fontWeight: '700',
+    fontWeight: '600',
+
+    // color: '#111827',
+    color: '#737373',
+
+    marginStart: 10, 
     marginBottom: 16,
   },
+
+
   storesGrid: {
     gap: 16,
   },

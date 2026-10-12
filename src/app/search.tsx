@@ -123,7 +123,9 @@ const styles = StyleSheet.create({
     elevation: 4,
   },
   searchButtonText: {
-    color: '#3B66FF',
+    // color: '#3B66FF',
+    color: '#000209',
+
     fontWeight: '700',
     fontSize: 16,
   },

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "StudentMarketplace",
-    "slug": "StudentMarketplace",
+    "name": "Pawn Shop",
+    "slug": "PawnShop",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",

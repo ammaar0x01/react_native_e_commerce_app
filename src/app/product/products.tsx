@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
-import { View, Text, ScrollView, TouchableOpacity, StyleSheet, Pressable } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, StyleSheet, Pressable, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+
+
+import img1 from '../../images/products/product4.jpg';
+
+// import img1 from '../../images/products/product3.jpeg';
+// import img1 from '../../images/products/product1.jpeg';
+
+
+
 
 interface ProductItem {
   id: string;
@@ -36,7 +45,13 @@ export default function productsView() {
 
           {/* Section Heading */}
           <Text style={styles.pageTitle}>Computers</Text>
+          <Text style={styles.resultsCount}>Number of results: 34</Text>
 
+  {/* <View style={styles.resultsHeader}>
+          <Text style={styles.resultsTitle}>Computers</Text>
+          <Text style={styles.resultsCount}>Number of results: 34</Text>
+        </View>
+         */}
           {/* Filter Bar */}
           <View style={styles.filterBar}>
             <View style={styles.filterGroup}>
@@ -60,7 +75,7 @@ export default function productsView() {
                   key={item.id}
                   onHoverIn={() => setHoveredId(item.id)}
                   onHoverOut={() => setHoveredId(null)}
-                  onPress={() => router.push('/product-details' as any)}
+                  onPress={() => router.push('/product/details' as any)}
                   style={[
                     styles.productCard,
                     isHovered && styles.productCardHovered,
@@ -79,7 +94,14 @@ export default function productsView() {
 
                   {/* Product Image Placeholder */}
                   <View style={styles.productImagePlaceholder}>
-                    <Ionicons name="laptop-outline" size={40} color="#111827" />
+                    {/* <Ionicons name="laptop-outline" size={40} color="#111827" /> */}
+
+                  <Image 
+                    source={img1} 
+                    style={styles.productImage}
+                    resizeMode="cover" />
+
+                    {/* <Image source={img0x00} />  */}
                   </View>
 
                   <Text numberOfLines={2} style={styles.productName}>{item.name}</Text>
@@ -129,14 +151,14 @@ const styles = StyleSheet.create({
   outerContainer: {
     flex: 1,
     backgroundColor: '#E59400',
-    padding: 16,
+    // padding: 16,
   },
   scrollContent: {
-    paddingBottom: 40,
+    // paddingBottom: 40,
   },
   whiteCardContainer: {
     backgroundColor: '#FFFFFF',
-    borderRadius: 32,
+    // borderRadius: 32,
     padding: 32,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
@@ -157,11 +179,22 @@ const styles = StyleSheet.create({
     color: '#374151',
   },
   pageTitle: {
-    fontSize: 36,
+    // fontSize: 36,
+    fontSize: 56,
+
     fontWeight: '800',
-    color: '#2E7D32', // Green accent matching reference
+    
+    // color: '#2E7D32', // Green accent matching reference
+    // color: '#ef8206', 
+    color: '#0a0500', 
+
+
     textAlign: 'center',
-    marginBottom: 24,
+    marginBottom: 14,
+
+    // newer
+    marginTop: 24,
+    fontFamily: "Serif", // use a custom font? 
   },
   filterBar: {
     borderWidth: 1,
@@ -195,6 +228,8 @@ const styles = StyleSheet.create({
     color: '#4B5563',
     fontWeight: '500',
   },
+
+  // === PRODUCTS ===
   productsGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -202,8 +237,19 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     marginBottom: 40,
   },
+  // ----
+  productImage: {
+    // width: '100%',
+    // height: '100%',
+    // borderRadius: 12,
+  },
+  // ---
   productCard: {
-    width: '30%',
+    // width: '30%',
+    width: '20%', // adaptable width dependent on number of images? 
+
+    // height: '60%',
+
     minWidth: 220,
     flexGrow: 1,
     borderWidth: 1,
@@ -215,7 +261,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   productCardHovered: {
-    borderColor: '#6366F1',
+    // borderColor: '#6366F1',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.15,
@@ -236,15 +282,24 @@ const styles = StyleSheet.create({
   },
   hoverOverlayText: {
     color: '#FFFFFF',
-    fontSize: 16,
-    fontWeight: '700',
+    // fontSize: 16,
+    fontSize: 27,
+
+    // fontWeight: '700',
+    fontWeight: '500',
+
     textAlign: 'center',
-    lineHeight: 22,
+
+    // lineHeight: 22,
+    lineHeight: 35,
+
+    // fontFamily: 'serif', 
+
   },
   productImagePlaceholder: {
     width: '100%',
     height: 140,
-    backgroundColor: '#F3F4F6',
+    // backgroundColor: '#F3F4F6',
     borderRadius: 14,
     justifyContent: 'center',
     alignItems: 'center',
@@ -267,6 +322,8 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#6B7280',
   },
+
+  // === PAGE related === 
   paginationContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -305,5 +362,19 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontWeight: '700',
     fontSize: 14,
+  },
+
+  // more -----------------
+  resultsCount: {
+    fontSize: 16,
+
+    // fontWeight: '600',
+    fontWeight: '700',
+
+    // color: '#4B5563',
+    color: '#d25b00',
+
+      textAlign: 'center',
+    marginBottom: 24,
   },
 });

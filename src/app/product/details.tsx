@@ -1,12 +1,20 @@
 import React from 'react';
-import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 
+import img1 from '../../images/products/product4.jpg';
+
+import img10 from '../../images/products/product1.jpeg';
+import img11 from '../../images/products/product3.jpeg';
+import img12 from '../../images/products/product5.jpeg';
+
+
+
 const RELATED_PRODUCTS = [
-  { id: '1', name: 'Phone cover', price: 'R 100', location: 'Atlantis' },
-  { id: '2', name: 'Phone cover', price: 'R 100', location: 'Atlantis' },
-  { id: '3', name: 'Phone cover', price: 'R 100', location: 'Atlantis' },
+  { id: '1', name: 'Phone cover', price: 'R 100', location: 'Atlantis', image: img10 },
+  { id: '2', name: 'Phone cover', price: 'R 100', location: 'Atlantis',  image: img11 },
+  { id: '3', name: 'Phone cover', price: 'R 100', location: 'Atlantis',  image: img12 },
 ];
 
 export default function ProductDetailsView() {
@@ -25,11 +33,27 @@ export default function ProductDetailsView() {
           {/* Top Section: Image & Purchase Details */}
           <View style={styles.productMainRow}>
             
+            {/* --- Adding conditional rendering? --- */}
             {/* Product Image Placeholder */}
-            <View style={styles.imagePreviewBox}>
+            {/* <View style={styles.imagePreviewBox}>
               <Ionicons name="laptop-outline" size={72} color="#111827" />
               <Text style={styles.imagePreviewSub}>ASUS ZenBook 14</Text>
-            </View>
+            </View> */}
+
+        <View style={styles.productImagePlaceholder}>
+            {/* <View style={styles.imagePreviewBox}> */}
+
+                    {/* <Ionicons name="laptop-outline" size={40} color="#111827" /> */}
+
+                  <Image 
+                    source={img1} 
+                    style={styles.productImage}
+                    resizeMode="cover" 
+                    />
+
+                    {/* <Image source={img0x00} />  */}
+                  </View>
+
 
             {/* Product Details & Purchase Controls */}
             <View style={styles.productInfoColumn}>
@@ -75,7 +99,14 @@ export default function ProductDetailsView() {
               {RELATED_PRODUCTS.map((prod) => (
                 <View key={prod.id} style={styles.recommendationCard}>
                   <View style={styles.recImagePlaceholder}>
-                    <Ionicons name="laptop-outline" size={32} color="#111827" />
+                    {/* <Ionicons name="laptop-outline" size={32} color="#111827" /> */}
+
+                     <Image 
+                    source={prod.image} 
+                    style={styles.productImageMore}
+                    resizeMode="cover" 
+                    />
+
                   </View>
                   <Text numberOfLines={1} style={styles.recName}>{prod.name}</Text>
                   <Text style={styles.recPrice}>{prod.price}</Text>
@@ -95,14 +126,14 @@ const styles = StyleSheet.create({
   outerContainer: {
     flex: 1,
     backgroundColor: '#E59400',
-    padding: 16,
+    // padding: 16,
   },
   scrollContent: {
-    paddingBottom: 40,
+    // paddingBottom: 40,
   },
   whiteCardContainer: {
     backgroundColor: '#FFFFFF',
-    borderRadius: 32,
+    // borderRadius: 32,
     padding: 32,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
@@ -129,6 +160,42 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     marginBottom: 32,
   },
+
+  // ----
+    productImagePlaceholder: {
+    // width: '100%',
+    // height: 140,
+    // // backgroundColor: '#F3F4F6',
+    // borderRadius: 14,
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    // marginBottom: 12,
+
+      flex: 1,
+    minWidth: 280,
+    height: 260,
+    backgroundColor: '#ffffff',
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: '#E5E7EB',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+   productImage: {
+    width: '50%',
+    height: '100%',
+    // borderRadius: 12,
+  },
+
+
+   productImageMore: {
+    width: '70%',
+    height: '100%',
+    // borderRadius: 12,
+  },
+  // ---
+
   imagePreviewBox: {
     flex: 1,
     minWidth: 280,
@@ -248,7 +315,9 @@ const styles = StyleSheet.create({
   recImagePlaceholder: {
     width: '100%',
     height: 100,
-    backgroundColor: '#F3F4F6',
+    // backgroundColor: '#F3F4F6',
+    backgroundColor: '#ffffff',
+
     borderRadius: 12,
     justifyContent: 'center',
     alignItems: 'center',
