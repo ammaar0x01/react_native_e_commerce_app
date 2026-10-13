@@ -1,7 +1,7 @@
 ## Pawn Shop
 - Started: 2026-10-02
-- Updated: 2026-10-11
-- Version: 0.1
+- Updated: 2026-10-13
+- Version: 0.2
 - Status: work-in-progress
 ---
 
@@ -30,6 +30,33 @@ In the output, you'll find options to open the app in a
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+
+
+## Naming Conventions 
+
+Different files have different naming styles
+- .ts files:         
+   + camel case
+   + used for TS logic 
+
+- .tsx files:        
+   + camel case
+   + used for components or views
+   + views (or pages; files that represent a page in the app) MUST have an exported functions that follows this syntax: 
+      > ' export default function CartView() { ... } '
+      > it must have a main function with the 'View' suffix
+      > the main function must be in Pascal Case
+      > NOTE: the 'view' suffix should not be used for layout files
+
+- .styles.ts files: 
+   + camel case
+   + used to style views or components 
+   + export const stylesCart = StyleSheet.create({
+
+- .css files:      
+   + kebab case
+   + used for generic styles 
+---
 
 
 ## Learn more
