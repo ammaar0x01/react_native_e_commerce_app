@@ -33,8 +33,9 @@ You can start developing by editing the files inside the **app** directory. This
 
 
 ## Naming Conventions 
-
+```
 Different files have different naming styles
+
 - .ts files:         
    + camel case
    + used for TS logic 
@@ -56,6 +57,7 @@ Different files have different naming styles
 - .css files:      
    + kebab case
    + used for generic styles 
+```
 ---
 
 

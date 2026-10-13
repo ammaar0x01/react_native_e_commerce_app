@@ -132,4 +132,3 @@ export const DUMMY_PRODUCTS: Product[] = [
   { id: 'tv9', name: 'Fujitsu 55" 4K UHD Smart TV', desc: 'Direct LED backlight with crisp resolution and optical audio output.', price: 'R 4,800', category: 'TVs', locations_available: ['Cape Town CBD'], new_or_used: 'Used' },
   { id: 'tv10', name: 'JVC 50" Smart 4K UHD TV', desc: 'Built-in streaming apps with ultra-thin profile and immersive sound.', price: 'R 4,499', category: 'TVs', locations_available: ['Claremont', 'Parow'], new_or_used: 'New' },
 ];
-
