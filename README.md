@@ -1,14 +1,34 @@
-## Pawn Shop
+# The Pawn Shop
 - Started: 2026-10-02
 - Updated: 2026-10-13
 - Version: 0.2
 - Status: work-in-progress
 ---
 
+
+## Screenshots
+
+Here is a quick preview of UI in desktop view: 
+
+| Landing Page | Home View |
+| :---: | :---: |
+| ![Landing Page](/public/screenshots/desktop/landing-page.png) | ![Home View](/public/screenshots/desktop/home.png) |
+
+| Search Products | Store Locator |
+| :---: | :---: |
+| ![Search Products](/public/screenshots/desktop/search-products.png) | ![Store Locator](/public/screenshots/desktop/store-locator.png) |
+
+| Shopping Cart | Sell an Item |
+| :---: | :---: |
+| ![Shopping Cart](/public/screenshots/desktop/your-shopping-cart.png) | ![Sell an Item](/public/screenshots/desktop/sell-an-item.png) |
+
+| User Account | |
+| :---: | :---: |
+| ![Account](/public/screenshots/desktop/account.png) | |
+---
+
+
 ## Installation and Execution
-
-
-## Commands
 
 1. Install dependencies
 
@@ -33,6 +53,7 @@ You can start developing by editing the files inside the **app** directory. This
 
 
 ## Naming Conventions 
+
 ```
 Different files have different naming styles
 
