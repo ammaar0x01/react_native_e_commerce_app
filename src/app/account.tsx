@@ -54,6 +54,10 @@ export default function AccountView() {
               <Text style={styles.optionCardText}>Personal Information</Text>
             </TouchableOpacity>
 
+
+            <TouchableOpacity style={styles.optionCard} activeOpacity={0.8}>
+              <Text style={styles.optionCardText}>Log Out</Text>
+            </TouchableOpacity>
           </View>
 
         </View>
@@ -87,7 +91,7 @@ const styles = StyleSheet.create({
   },
   pageTitle: {
     // fontSize: 32,
-    fontSize: 40,
+    fontSize: 44,
 
     // fontWeight: '800',
     fontWeight: '900',
@@ -105,6 +109,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 14,
     marginBottom: 28,
+    
     borderWidth: 1,
     borderColor: '#E5E7EB',
     shadowColor: '#000',
@@ -114,7 +119,9 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   searchInput: {
-    fontSize: 15,
+    fontSize: 18, 
+    // fontSize: 15,
+    
     color: '#111827',
     textAlign: 'center',
   },

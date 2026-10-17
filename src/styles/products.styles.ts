@@ -48,7 +48,7 @@ export const stylesProducts = StyleSheet.create({
 
     // newer
     marginTop: 24,
-    fontFamily: "Serif", // use a custom font? 
+    // fontFamily: "Serif", // use a custom font? 
   },
   filterBar: {
     borderWidth: 1,

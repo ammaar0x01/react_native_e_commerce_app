@@ -1,43 +1,101 @@
 // index.style.ts //
 
+import { GlobalStyles } from "@/themes";
 import { StyleSheet } from "react-native";
 
 
 export const stylesIndex = StyleSheet.create({
-// export const styles = StyleSheet.create({
-  outerContainer: {
-    flex: 1,
-    backgroundColor: '#ffffff',
-    paddingTop: 20,
+  outerContainer: GlobalStyles.mainContainer,
+
+  scrollContent: GlobalStyles.scrollContent,
+
+  //  outerContainer: {
+  //   flex: 1,
+  //   backgroundColor: '#ffffff',
+  //   // paddingTop: 20,
+  //   padding: 40,
+
+  // },
+  // scrollContent: {
+  //   paddingBottom: 40,
+  // },
+
+
+
+
+// newer
+headerContainer: {
+    marginBottom: 20,
+    gap: 6,
   },
-  scrollContent: {
-    paddingBottom: 40,
-  },
-  headerContainer: {
+  headerTitleRow: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    marginBottom: 24,
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: 8,
   },
 
+  // headerTitle: {
+  //   fontWeight: 'bold',
+  //   color: '#1E293B',
+  // },
+  // headerSubtitle: {
+  //   color: '#64748B',
+  // },
+// newer --
+
+  // === HEADER === 
+//   headerTitleRow: {
+//   flexDirection: 'row',
+//   alignItems: 'center',
+//   flexWrap: 'wrap',
+//   gap: 8,
+// },
+  // headerContainer: {
+  //   flexDirection: 'row',
+  //   justifyContent: 'space-between',
+  //   alignItems: 'flex-start',
+  //   marginBottom: 24,
+  // },
+
   // === HEADINGS === 
-  headerTitle: {
-    fontSize: 26,
-    fontWeight: '800',
-    color: '#111827',
-    letterSpacing: -0.5,
-  },
-  headerSubtitle: {
-    fontSize: 13,
-    color: '#6B7280',
-    marginTop: 4,
-  },
+  // headerTitle: {
+  //   // fontSize: 26,
+  //   fontSize: 44,
+  //   fontWeight: '800',
+  //   color: '#111827',
+  //   // letterSpacing: -0.5,
+  // },
+
+  //   pageTitle: {
+  //   // fontSize: 32,
+  //   fontSize: 44,
+
+  //   // fontWeight: '800',
+  //   fontWeight: '900',
+
+  //   color: '#111827',
+  //   marginBottom: 20,
+
+  //   // fontFamily: 'serif', 
+  // },
+
+  // headerSubtitle: {
+  //   fontSize: 13,
+  //   color: '#6B7280',
+  //   marginTop: 4,
+  // },
+
+  headerTitle: GlobalStyles.pageTitle,
+
+  headerSubtitle: GlobalStyles.pageSubtitle,
+
 
   // === BADGES === 
   badgeContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#FEF3C7',
+    backgroundColor: '#ff7403',
     paddingHorizontal: 10,
     paddingVertical: 6,
     borderRadius: 12,
@@ -46,10 +104,11 @@ export const stylesIndex = StyleSheet.create({
     gap: 4,
   },
   badgeText: {
-    fontSize: 11,
+    fontSize: 16,
     fontWeight: '700',
-    color: '#E59400',
+    color: '#ffffff',
   },
+
 
   // === CATEGORY SECTION === 
   categoryContainer: {

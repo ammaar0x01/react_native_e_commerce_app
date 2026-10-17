@@ -111,32 +111,50 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     color: '#D97706',
   },
+
+  // === LOGIN SECTION ===
   orangeCard: {
-    backgroundColor: '#F59E0B',
+    backgroundColor: 'transparent',
+    // backgroundColor: '#F59E0B',
+
     borderRadius: 32,
-    paddingVertical: 32,
-    paddingHorizontal: 24,
-    width: '100%',
+    padding: 40,
+    paddingHorizontal: 54,
+    // width: '100%',
     alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.12,
-    shadowRadius: 10,
-    elevation: 5,
+    
+    // shadowColor: '#000',
+    // shadowOffset: { width: 0, height: 6 },
+    // shadowOpacity: 0.12,
+    // shadowRadius: 10,
+    // elevation: 5,
+
     marginBottom: 16,
   },
   cardTitle: {
     fontSize: 34,
     fontWeight: '800',
-    color: '#FFFFFF',
+    color: '#d58f04',
     marginBottom: 24,
   },
   inputField: {
-    backgroundColor: '#FFFFFF',
-    borderRadius: 24,
+    backgroundColor: '#ffffff',
+    // borderRadius: 24,
     paddingHorizontal: 20,
     paddingVertical: 13,
-    width: '100%',
+    
+    // outline: 'none', 
+     height: 50,
+    borderWidth: 0,
+    borderColor: '#ccc',
+    borderRadius: 8,
+    // paddingHorizontal: 10,
+    // fontSize: 16,
+
+    textAlign: 'center',
+    width: 400,
+    // width: '100%',
+
     fontSize: 14,
     color: '#111827',
     marginBottom: 14,

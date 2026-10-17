@@ -1,5 +1,5 @@
 /*
-main.ts
+main.ts remove this file?
 =======
 */
 import { StyleSheet } from "react-native";
@@ -15,6 +15,20 @@ const globalStyles = {
   },
   scrollContent: {
     paddingBottom: 40,
+  },
+
+  // === PAGE HEADING === 
+    pageTitle: {
+    // fontSize: 32,
+    fontSize: 44,
+
+    // fontWeight: '800',
+    fontWeight: '900',
+
+    color: '#111827',
+    marginBottom: 20,
+
+    // fontFamily: 'serif', 
   },
 };
 

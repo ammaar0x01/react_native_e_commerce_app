@@ -4,8 +4,12 @@ import { StyleSheet } from "react-native";
 export const stylesCart = StyleSheet.create({
   outerContainer: {
     flex: 1,
-    backgroundColor: '#E59400',
+    // backgroundColor: '#E59400',
+    backgroundColor: '#ffffff',
+
     // padding: 16,
+    padding: 40, 
+
   },
   scrollContent: {
     // paddingBottom: 40,
@@ -13,7 +17,8 @@ export const stylesCart = StyleSheet.create({
   whiteCardContainer: {
     backgroundColor: '#FFFFFF',
     // borderRadius: 32,
-    padding: 32,
+    // padding: 32,
+
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.1,
@@ -25,7 +30,7 @@ export const stylesCart = StyleSheet.create({
 
   },
   pageTitle: {
-    fontSize: 28,
+    fontSize: 44,
     fontWeight: '800',
     color: '#000000',
     marginBottom: 24,

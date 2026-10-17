@@ -120,9 +120,9 @@ export default function Layout() {
     { label: 'Home', path: '/', icon: <Ionicons name="home-outline" size={24} color="white" /> },
     { label: 'Search', path: '/search', icon: <Ionicons name="search-outline" size={24} color="white" /> },
     { label: 'Stores', path: '/stores', icon: <Ionicons name="location-outline" size={24} color="white" /> },
-    { label: 'Account', path: '/account', icon: <Ionicons name="person-circle-outline" size={24} color="white" /> },
     { label: 'Cart', path: '/cart', icon: <Ionicons name="cart-outline" size={24} color="white" /> },
     { label: 'Sell', path: '/sell', icon: <MaterialCommunityIcons name="cash-multiple" size={24} color="white" /> },
+    { label: 'Account', path: '/account', icon: <Ionicons name="person-circle-outline" size={24} color="white" /> },
   ];
 
   return (

@@ -106,6 +106,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#E59400',
     borderRadius: 32,
     padding: 32,
+    paddingHorizontal: 50, 
     width: '100%',
     alignItems: 'center',
     shadowColor: '#000',

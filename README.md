@@ -1,7 +1,7 @@
 # The Pawn Shop
 - Started: 2026-10-02
-- Updated: 2026-10-13
-- Version: 0.2
+- Updated: 2026-10-18
+- Version: 0.3
 - Status: work-in-progress
 ---
 
